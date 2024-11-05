@@ -1,5 +1,4 @@
-//d6DF4id7Rnj7pzdK
-//mongodb+srv://hamjad:d6DF4id7Rnj7pzdK@cluster0.ewylj.mongodb.net/project?retryWrites=true&w=majority&appName=Cluster0
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from "mongoose";
