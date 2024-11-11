@@ -12,6 +12,7 @@ router.post('', (req, res, next) => {
 
   post.save().then(result => {
     res.status(201).json(
+
       {
         success: true,
         postId: result._id
@@ -35,6 +36,7 @@ router.put('/:id', (req, res, next) => {
 router.get('', (req, res, next) => {
   Post.find()
     .then(data => {
+      console.log(data)
       res.status(200).json({
         success: true,
         data: data

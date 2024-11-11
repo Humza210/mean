@@ -3,6 +3,10 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from "mongoose";
 
+import postRoutes from './routes/post.js';
+
+import Post from './model/post.js'
+
 
 mongoose.connect(process.env.MONGO_KEY)
   .then(() => {
@@ -29,6 +33,8 @@ app.use((req, res, next) => {
     'GET, POST, PATCH, PUT, DELETE, OPTIONS'
   );
   next();
+
+  app.use('/api/posts', postRoutes);
 });
 
 

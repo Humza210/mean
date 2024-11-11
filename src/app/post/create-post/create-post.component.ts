@@ -41,6 +41,7 @@ export class CreatePostComponent implements OnInit {
     }
     this.isLoading = true;
     if (this.mode === 'create') {
+      console.log('create called')
       this.postService.addPost(form.value.title, form.value.content);
       form.resetForm()
     } else{
