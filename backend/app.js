@@ -11,7 +11,6 @@ import Post from './model/post.js'
 mongoose.connect(process.env.MONGO_KEY)
   .then(() => {
     console.log('connected to db');
-    console.log(process.env.MONGO_KEY)
 
   }).catch(() => {
   console.log('connection failed');
