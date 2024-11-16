@@ -63,4 +63,35 @@ router.delete('/:id', (req, res, next) => {
   });
 });
 
+router.get('/:id', (req, res, next) => {
+  const postId = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(postId)) {
+    return res.status(400).json({
+      success: false,
+      message: 'Invalid Post ID'
+    });
+  }
+
+  Post.findById(postId)
+    .then(post => {
+      if (post) {
+        res.status(200).json(post);
+      } else {
+        res.status(404).json({
+          success: false,
+          message: 'Post not found'
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching post:', error);
+      res.status(500).json({
+        success: false,
+        message: 'Server error'
+      });
+    });
+});
+
+
 export default router;

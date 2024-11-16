@@ -19,6 +19,7 @@ import { PostListComponent } from './post/post-list/post-list.component';
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { PostByIdComponent } from './post/post-by-id/post-by-id.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     FooterComponent,
     CreatePostComponent,
     PostListComponent,
+    PostByIdComponent,
   ],
   imports: [
     BrowserModule,
