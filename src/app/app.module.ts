@@ -17,9 +17,12 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { PostListComponent } from './post/post-list/post-list.component';
 import {CommonModule} from "@angular/common";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
-import { PostByIdComponent } from './post/post-by-id/post-by-id.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import {AuthInterceptor} from "./auth/auth-interceptor";
+import { JokeComponent } from './joke/joke.component';
 
 
 @NgModule({
@@ -29,7 +32,9 @@ import { PostByIdComponent } from './post/post-by-id/post-by-id.component';
     FooterComponent,
     CreatePostComponent,
     PostListComponent,
-    PostByIdComponent,
+    LoginComponent,
+    SignupComponent,
+    JokeComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,7 @@ import { PostByIdComponent } from './post/post-by-id/post-by-id.component';
     BrowserAnimationsModule,
     MatExpansionModule, CommonModule, MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
