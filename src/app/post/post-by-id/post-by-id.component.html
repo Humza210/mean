@@ -1,24 +1,24 @@
-<div class="post-view">
-  <h2>View Post</h2>
+<!--<div class="post-view">-->
+<!--  <h2>View Post</h2>-->
 
-  <!-- Error Message Section -->
-  <div *ngIf="error" class="error-message mt-4">
-    <p class="text-danger">{{ error }}</p>
-  </div>
+<!--  &lt;!&ndash; Error Message Section &ndash;&gt;-->
+<!--  <div *ngIf="error" class="error-message mt-4">-->
+<!--    <p class="text-danger">{{ error }}</p>-->
+<!--  </div>-->
 
-  <!-- Input and Button to Enter Post ID -->
-  <div *ngIf="!post" class="post-input mt-4">
-    <mat-form-field appearance="fill">
-      <mat-label>Post ID</mat-label>
-      <input matInput [(ngModel)]="postId" placeholder="Enter Post ID" />
-    </mat-form-field>
+<!--  &lt;!&ndash; Input and Button to Enter Post ID &ndash;&gt;-->
+<!--  <div *ngIf="!post" class="post-input mt-4">-->
+<!--    <mat-form-field appearance="fill">-->
+<!--      <mat-label>Post ID</mat-label>-->
+<!--      <input matInput [(ngModel)]="postId" placeholder="Enter Post ID" />-->
+<!--    </mat-form-field>-->
 
-    <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
-  </div>
+<!--    <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>-->
+<!--  </div>-->
 
-  <!-- Post Details Section -->
-  <div *ngIf="post" class="post-details mt-4">
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.content }}</p>
-  </div>
-</div>
+<!--  &lt;!&ndash; Post Details Section &ndash;&gt;-->
+<!--  <div *ngIf="post" class="post-details mt-4">-->
+<!--    <h3>{{ post.title }}</h3>-->
+<!--    <p>{{ post.content }}</p>-->
+<!--  </div>-->
+<!--</div>-->

@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+Functionality of App
+
+1. If the user is not logged in then only posts will be showed, the guest user cannot delete or edit post
+2. User can log in or sign up
+3. once user can log in the user can edit or edit post
+4. User can also create post if user is log in
