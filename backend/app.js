@@ -8,7 +8,7 @@ import userRoutes from './routes/user.js';
 mongoose.connect(process.env.MONGO_KEY)
   .then(() => {
     console.log('connected to db');
-    console.log('secret key',process.env.SECRET_KEY);
+    // console.log('secret key',process.env.SECRET_KEY);
 
   }).catch(() => {
   console.log('connection failed');
