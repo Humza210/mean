@@ -5,11 +5,11 @@ import mongoose from "mongoose";
 import postRoutes from './routes/post.js';
 import userRoutes from './routes/user.js';
 
-import Post from './model/post.js'
-
 mongoose.connect(process.env.MONGO_KEY)
   .then(() => {
     console.log('connected to db');
+    console.log('secret key',process.env.SECRET_KEY);
+
   }).catch(() => {
   console.log('connection failed');
 });
